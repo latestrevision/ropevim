@@ -8,5 +8,7 @@ import ropevim
 EOF
 endfunction
 
-let current_path = expand("<sfile>")
-call LoadRope(current_path)
+if has('python')
+    let current_path = expand("<sfile>")
+    call LoadRope(current_path)
+endif
