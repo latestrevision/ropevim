@@ -4,7 +4,10 @@ import sys
 import os
 import vim
 sys.path.append(os.path.dirname(vim.eval("a:current_path")))
-import ropevim
+try:
+    import ropevim
+except ImportError:
+    pass
 EOF
 endfunction
 
